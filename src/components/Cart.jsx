@@ -161,10 +161,27 @@ function Cart() {
                             </div>
                         ))}
 
+                        <hr />
+
+                        <h3>Total Units: {totalItems}</h3>
+
+                        <h3>
+                            Total Price: ₹{totalPrice.toLocaleString("en-IN")}
+                        </h3>
+
+                        <button
+                            className="clear-button"
+                            onClick={() => dispatch({ type: "CLEAR_CART" })}
+                        >
+                            Clear Cart
+                        </button>
+
                         <div className="cart-total">
                             <div>
                                 <p>Total items: {totalItems}</p>
-                                <h2>Total: ₹{totalPrice.toLocaleString("en-IN")}</h2>
+                                <h2>
+                                    Total: ₹{totalPrice.toLocaleString("en-IN")}
+                                </h2>
                                 <span>💚 Thanks for shopping with us!</span>
                             </div>
 
@@ -182,4 +199,3 @@ function Cart() {
 }
 
 export default Cart;
-   
